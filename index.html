@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>A Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+    <div class="pageWrapper">
+      <div class="banner">
+        <h1 class="bannerText"> PSaaS - Party Supplies as a service </h1>
+      </div>
+      <div class="displaySupplyContainer" id="displaySupplyContainer">
+        <!-- parent container for dynamic div elements to be created with JS -->
+      </div>
+      <hr>
+      <div class="formContainer" id="formContainer">
+        <h3> What party supplies do you want to order? </h3>
+        <form id="supplyForm" method="post">
+          <div class="formGroup">
+              <label for="what" class="formLabel">What</label>
+              <div class="formInput">
+                <input type="radio" name="supply" value="Beers" required>Beers
+                <input type="radio" name="supply" value="Balloons">Balloons
+                <input type="radio" name="supply" value="Chips">Chips<br><br>
+              </div>
+          </div>
+
+          <div class="formGroup">
+              <label for="amount" class="formLabel">Amount</label>
+              <div class="formInput">
+                <input type="text" name="amount" class="formControl" id="amount" required><br><br>
+                <div id="amountError"></div>
+              </div>
+          </div>
+
+          <div class="formGroup">
+              <label for="who" class="formLabel">Who</label>
+              <div class="formInput">
+                <input type="text" name="name" class="formControl" id="name" required><br><br>
+              </div>
+          </div>
+
+          <button id="submitForm" type="submit">ORDER NOW!</button>
+        </form>
+      </div>
+    </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+</body>
+</html>

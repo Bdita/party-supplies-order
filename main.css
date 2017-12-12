@@ -1,0 +1,532 @@
+body {
+  font:12px Arial, Helvetica, sans-serif;
+  color: #000;
+  overflow:hidden;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  height: auto;
+  overflow-y: scroll;
+}
+
+.pageWrapper {
+  min-height: 100%;
+  width: 100%;
+}
+
+.banner {
+  width: 100%;
+  height: 280px;
+  background-image:url('party.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: -5%;
+}
+
+.banner .bannerText {
+  color: #fff;
+  text-align: center;
+  padding-top: 8%;
+}
+
+.formContainer {
+  font-size: 1em;
+  margin: 0 0 0 35%;
+  width: 33%;
+  height: 200px;
+  padding-left: 2%;
+}
+
+.formContainer h3 {
+  padding-left: 10%;
+}
+
+.formLabel {
+  color: #acacac;
+  margin-right: 5%;
+  font-weight: bold;
+}
+
+.formInput {
+  margin: -3% 0 0 25%;
+}
+
+.formControl {
+  margin-right: -50%;
+}
+
+#amount {
+  width: 58%;
+  height: 20px;
+}
+
+#name {
+  width: 58%;
+  height: 20px;
+}
+
+input:focus, textarea:focus, select:focus {
+outline-offset: 0px !important;
+outline: none !important;
+}
+
+input[type=text]:focus, textarea:focus {
+  border: 1.5px solid #ECC579;
+}
+
+.displaySupplyContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 45%;
+  height: auto;
+  margin: 0% 0 0 28%;
+}
+
+hr {
+  text-align: center;
+  width: 380px;
+}
+
+#displaySupply {
+  width: 200px;
+  height: 60px;
+  border: 1px solid #939393;
+  border-radius: 6px;
+  box-shadow: 0px 0px 5px #696969;
+  margin: 1.5% 0 1.5% 0;
+}
+
+#supplyName {
+  font-size: 1.25em;
+  margin: 3% 0 0 3%;
+}
+
+#amountNum {
+  font-size: 1.25em;
+  margin: -8% 0 0 88%;
+}
+
+#orderText {
+  font-size: 0.95em;
+  margin: 8% 0 0 3%;
+}
+
+#personName {
+  font-size: 0.95em;
+  font-weight: bold;
+  margin: -6% 0 0 35%;
+}
+
+#amountError {
+  color: red;
+}
+
+#submitForm {
+  background-color: #008000;
+  position:relative;
+  left: 28%;
+  width: 25%;
+  height: 25px;
+  border: 2px solid #D2D2D2;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+}
+
+#conditionalRequestError {
+  color: red;
+  margin: 5%;
+}
+
+/*media queries for different screen sized devices*/
+@media (min-width:300px) {
+  .banner .bannerText {
+    padding: 30% 2% 0 2%;
+    font-size: 2.5em;
+    font-weight: normal;
+  }
+  .displaySupplyContainer {
+    width: 90%;
+    margin: 2% 0 0 5%;
+  }
+  #displaySupply {
+    width: 350px;
+    height: 90px;
+    margin: 1.5% 0 1.5% 0;
+  }
+  #supplyName {
+    font-size: 1.5em;
+    margin: 4% 0 0 4%;
+  }
+  #amountNum {
+    font-size: 1.5em;
+    margin: -8% 0 0 88%;
+  }
+  #orderText {
+    font-size: 1em;
+    margin: 9% 0 0 4%;
+  }
+  #personName {
+    font-size: 1em;
+    font-weight: bold;
+    margin: -5% 0 0 28%;
+  }
+  hr {
+    text-align: center;
+    width: 300px;
+  }
+  .formContainer {
+    margin: 0 0 0 5%;
+    width: 80%;
+  }
+  .formInput {
+    margin: -6% 0 0 25%;
+  }
+  input[type=text] {
+    border: 1px solid #D2D2D2;
+  }
+  #amount {
+    width: 90%;
+  }
+  #name {
+    width: 90%;
+  }
+  #submitForm {
+    width: 40%;
+    font-size: 0.75em;
+    left: 35%;
+  }
+}
+@media (min-width:350px)  { /* smartphones, iPhone, portrait 480x320 phones */
+  .banner .bannerText {
+    padding: 25% 10% 0 10%;
+    font-size: 2.5em;
+    font-weight: normal;
+  }
+  .displaySupplyContainer {
+    width: 80%;
+    margin: 2% 0 0 10%;
+  }
+  #displaySupply {
+    width: 350px;
+    height: 90px;
+    margin: 1.5% 0 1.5% 0;
+  }
+  #supplyName {
+    font-size: 1.75em;
+    margin: 4% 0 0 4%;
+  }
+  #amountNum {
+    font-size: 1.75em;
+    margin: -8% 0 0 88%;
+  }
+  #orderText {
+    font-size: 1.25em;
+    margin: 8% 0 0 4%;
+  }
+  #personName {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin: -5.5% 0 0 33%;
+  }
+  hr {
+    text-align: center;
+    width: 300px;
+  }
+  .formContainer {
+    margin: 0 0 0 10%;
+    width: 70%;
+  }
+  .formInput {
+    margin: -6% 0 0 25%;
+  }
+  input[type=text] {
+    border: 1px solid #D2D2D2;
+  }
+  #amount {
+    width: 90%;
+  }
+  #name {
+    width: 90%;
+  }
+  #submitForm {
+    width: 40%;
+    font-size: 0.75em;
+    left: 35%;
+  }
+}
+@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+  .banner .bannerText {
+    padding: 25% 10% 0 10%;
+    font-size: 2.5em;
+    font-weight: normal;
+  }
+  .displaySupplyContainer {
+    width: 55%;
+    margin: 2% 0 0 25%;
+  }
+  #displaySupply {
+    width: 300px;
+    height: 90px;
+    margin: 1.5% 0 1.5% 0;
+  }
+  #supplyName {
+    font-size: 1.75em;
+    margin: 4% 0 0 4%;
+  }
+  #amountNum {
+    font-size: 1.75em;
+    margin: -8% 0 0 88%;
+  }
+  #orderText {
+    font-size: 1.25em;
+    margin: 8% 0 0 4%;
+  }
+  #personName {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin: -6% 0 0 33%;
+  }
+  hr {
+    text-align: center;
+    width: 300px;
+  }
+  .formContainer {
+    margin: 0 0 0 30%;
+    width: 60%;
+  }
+  #submitForm {
+    width: 40%;
+    font-size: 0.75em;
+  }
+  .formInput {
+    margin: -6% 0 0 25%;
+  }
+  #amount {
+    width: 76%;
+  }
+  #name {
+    width: 76%;
+  }
+}
+@media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  .banner .bannerText {
+    padding: 15% 10% 0 10%;
+    font-size: 2.5em;
+    font-weight: normal;
+  }
+  .displaySupplyContainer {
+    width: 50%;
+    margin: 2% 0 0 25%;
+  }
+  #displaySupply {
+    width: 300px;
+    height: 90px;
+    margin: 1.5% 0 1.5% 0;
+  }
+  #supplyName {
+    font-size: 1.75em;
+    margin: 4% 0 0 4%;
+  }
+
+  #amountNum {
+    font-size: 1.75em;
+    margin: -8% 0 0 88%;
+  }
+
+  #orderText {
+    font-size: 1.25em;
+    margin: 8% 0 0 4%;
+  }
+
+  #personName {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin: -6% 0 0 33%;
+  }
+  hr {
+    text-align: center;
+    width: 380px;
+  }
+  .formContainer {
+    width: 40%;
+  }
+  #submitForm {
+    font-size: 0.75em;
+    left: 25%;
+  }
+  .formInput {
+    margin: -6% 0 0 25%;
+  }
+  #amount {
+    width: 75%;
+  }
+  #name {
+    width: 75%;
+  }
+}
+@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
+  .banner .bannerText {
+    padding: 12% 10% 0 10%;
+    font-size: 2.5em;
+    font-weight: normal;
+  }
+  .displaySupplyContainer {
+    width: 50%;
+    margin: 1% 0 0 25%;
+  }
+  #displaySupply {
+    width: 200px;
+    height: 60px;
+    margin: 1.5% 0 1.5% 0;
+  }
+  #supplyName {
+    font-size: 1.25em;
+    margin: 3% 0 0 3%;
+  }
+
+  #amountNum {
+    font-size: 1.25em;
+    margin: -8% 0 0 88%;
+  }
+
+  #orderText {
+    font-size: 0.95em;
+    margin: 8% 0 0 3%;
+  }
+
+  #personName {
+    font-size: 0.95em;
+    font-weight: bold;
+    margin: -6% 0 0 35%;
+  }
+  hr {
+    text-align: center;
+    width: 380px;
+  }
+  .formContainer {
+    margin: 0 0 0 30%;
+    width: 40%;
+  }
+  #submitForm {
+    font-size: 0.75em;
+    left: 25%;
+  }
+  .formInput {
+    margin: -4% 0 0 25%;
+  }
+  #amount {
+    width: 75%;
+  }
+  #name {
+    width: 75%;
+  }
+}
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */
+  .banner .bannerText {
+    padding: 10% 10% 0 10%;
+    font-size: 2.5em;
+    font-weight: normal;
+  }
+  .displaySupplyContainer {
+    width: 50%;
+    margin: 0% 0 0 25%;
+  }
+  #displaySupply {
+    width: 200px;
+    height: 60px;
+    margin: 1.5% 0 1.5% 0;
+  }
+  #supplyName {
+    font-size: 1.25em;
+    margin: 3% 0 0 3%;
+  }
+  #amountNum {
+    font-size: 1.25em;
+    margin: -8% 0 0 88%;
+  }
+  #orderText {
+    font-size: 0.95em;
+    margin: 8% 0 0 3%;
+  }
+  #personName {
+    font-size: 0.95em;
+    font-weight: bold;
+    margin: -6% 0 0 35%;
+  }
+  .formContainer {
+    margin: 0 0 0 33%;
+  }
+  #submitForm {
+    width: 25%;
+    left: 25%;
+  }
+  hr {
+    text-align: center;
+    width: 380px;
+  }
+  .formInput {
+    margin: -3% 0 0 25%;
+  }
+  #amount {
+    width: 58%;
+  }
+  #name {
+    width: 58%;
+  }
+ }
+@media (min-width:1281px) { /* hi-res laptops and desktops */
+  .banner .bannerText {
+    padding: 10% 10% 0 10%;
+    font-size: 2.5em;
+    font-weight: normal;
+  }
+  .displaySupplyContainer {
+    width: 45%;
+    margin: 0% 0 0 28%;
+  }
+  #displaySupply {
+    width: 200px;
+    height: 60px;
+    margin: 1.5% 0 1.5% 0;
+  }
+  #supplyName {
+    font-size: 1.25em;
+    margin: 3% 0 0 3%;
+  }
+  #amountNum {
+    font-size: 1.25em;
+    margin: -8% 0 0 88%;
+  }
+  #orderText {
+    font-size: 0.95em;
+    margin: 8% 0 0 3%;
+  }
+  #personName {
+    font-size: 0.95em;
+    font-weight: bold;
+    margin: -6% 0 0 35%;
+  }
+  hr {
+    text-align: center;
+    width: 380px;
+  }
+  .formContainer {
+    margin: 0 0 0 35%;
+  }
+  .formInput {
+    margin: -3% 0 0 23%;
+  }
+  #amount {
+    width: 58%;
+  }
+  #name {
+    width: 58%;
+  }
+  #submitForm {
+    left: 25%;
+  }
+}
